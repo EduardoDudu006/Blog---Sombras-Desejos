@@ -1,0 +1,156 @@
+/* ===============================
+   🎨 VARIÁVEIS DE TEMA
+================================ */
+:root {
+  --bg-gradient: radial-gradient(circle at top, #12090a, #050405);
+  --card: rgba(255,255,255,0.05);
+  --text: #f2f2f2;
+  --muted: #aaa;
+  --accent: #d4af37;
+  --wine: #4b0f14;
+}
+
+[data-theme="dark-red"] {
+  --bg-gradient: radial-gradient(circle at top, #2a0508, #040102);
+  --card: rgba(255,255,255,0.07);
+  --text: #f6eaea;
+  --muted: #c2a1a1;
+  --accent: #ff4d5a;
+  --wine: #8b0000;
+}
+
+/* ===============================
+   BASE
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* ===============================
+   HEADER
+================================ */
+.header {
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+}
+
+.brand span {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+nav a {
+  margin-left: 16px;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* ===============================
+   HERO
+================================ */
+.hero {
+  height: 70vh;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.6), #050405),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1400&q=80") center/cover;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 16px 0;
+  color: var(--muted);
+}
+
+/* ===============================
+   GRID / CARDS
+================================ */
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 40px rgba(0,0,0,.6);
+  transition: transform 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===============================
+   POSTS
+================================ */
+.post {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.post img {
+  width: 120px;
+  height: 160px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.btn {
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
